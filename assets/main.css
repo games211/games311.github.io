@@ -115,7 +115,7 @@ nav h1 {
 }
  
 #games img:hover {
-    transform: scale(1.01);
+    transform: scale(1.15);
 }
 
 .featured {
