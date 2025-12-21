@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
 
 body {
-    background-image: url('http://i.imgur.com/V7ecIPI.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -199,9 +195,9 @@ h2 {
 
 
 
-.container {
+html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   --s: 200px; /* control the size */
   --c1: #1d1d1d;
   --c2: #4e4f51;
