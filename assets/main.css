@@ -217,3 +217,41 @@ html, body {
     );
   background-size: var(--s) calc(var(--s) * 0.577);
 }
+
+
+#games a {
+    position: relative;
+    display: inline-block;
+}
+
+#games a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 0.3vw 0.6vw;
+    border-radius: 0.4vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+#games a:hover::after {
+    opacity: 1;
+}
+
+#games a img {
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+#games a:hover img {
+    filter: brightness(55%);
+    transform: scale(1.05);
+}
+
