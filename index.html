@@ -136,7 +136,9 @@
 	<a href="https://talkbot27648.lovable.app"><img src="../games/ai/splash.png" alt="ChatGPT"></a>
     </div>
 
-    <p align="center"><iframe src="https://suggestions211.lovable.app" scrolling="no" width="75%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
+<div class="iframe-wrapper">
+    	<p align="center"><iframe src="https://suggestions211.lovable.app" scrolling="no" width="75%" height="900" frameborder="0" marginheight="0" 	marginwidth="0">Loading…</iframe></p>
+</div>
 <center><h2>Credit 3kh0</h2></center>
 
 <script>
@@ -174,5 +176,12 @@ window.addEventListener('load', () => {
 });
 </script>
 
+<script>
+document.querySelectorAll('iframe').forEach(iframe => {
+    iframe.addEventListener('load', () => {
+        iframe.classList.add('loaded');
+    });
+});
+</script>
 </body>
 </html>
