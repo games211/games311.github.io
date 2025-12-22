@@ -340,3 +340,69 @@ html, body {
     text-shadow: 0 0 30px white;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.nav-menu {
+    list-style: none;
+    position: fixed;
+    top: 7vw;
+    right: -100%;
+    width: 220px;
+    height: calc(100vh - 7vw);
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2vw;
+    transition: right 0.3s ease;
+    z-index: 9998;
+}
+
+.nav-menu li {
+    margin-bottom: 1.5vw;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav h1 {
+        font-size: 6vw;
+    }
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
