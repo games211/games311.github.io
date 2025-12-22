@@ -251,7 +251,60 @@ html, body {
 }
 
 #games a:hover img {
-    filter: brightness(55%);
+    filter: brightness(40%);
     transform: scale(1.05);
+}
+
+
+#games a {
+    position: relative;
+    display: inline-block;
+}
+
+#games a::before {
+    content: "\f04b"; /* Font Awesome play icon */
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2vw;
+    color: white;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.2s ease;
+}
+
+#games a::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9vw;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.25vw 0.6vw;
+    border-radius: 0.4vw;
+    opacity: 0;
+    z-index: 2;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+
+#games a:hover::before,
+#games a:hover::after {
+    opacity: 1;
+}
+
+#games a::before { font-size: 2.6vw; }
+
+#games a:hover img { filter: brightness(30%); }
+
+#games a::before {
+    text-shadow: 0 0 30px white;
 }
 
