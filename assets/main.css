@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
 
+iframe {
+    background: #111;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+iframe.loaded {
+    opacity: 1;
+}
+
+.iframe-wrapper {
+    background: #111;
+    padding: 2vw 0;
+}
+
 #loader {
     position: fixed;
     inset: 0;
