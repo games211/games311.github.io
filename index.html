@@ -141,5 +141,19 @@ document.querySelectorAll('#games a img').forEach(img => {
     img.parentElement.dataset.title = img.alt;
 });
 </script>
+
+<script>
+const searchInput = document.querySelector('.search input');
+const games = document.querySelectorAll('#games a');
+
+searchInput.addEventListener('input', e => {
+    const value = e.target.value.toLowerCase();
+    games.forEach(game => {
+        const title = game.querySelector('img').alt.toLowerCase();
+        game.style.display = title.includes(value) ? '' : 'none';
+    });
+});
+</script>
+
 </body>
 </html>
