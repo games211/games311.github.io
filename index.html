@@ -21,7 +21,7 @@
  	text-decoration:none;  
  }
 </style>
-<body>
+<body class="loading">
 <div id="loader">
     <div class="loader"></div>
 </div>
@@ -162,8 +162,11 @@ searchInput.addEventListener('input', e => {
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
+
         loader.style.opacity = '0';
         loader.style.pointerEvents = 'none';
+
+        document.body.classList.remove('loading');
 
         setTimeout(() => loader.remove(), 300);
     }, 2000);
