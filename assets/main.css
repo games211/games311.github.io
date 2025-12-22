@@ -65,7 +65,7 @@ nav {
     height: 7vw;
     width: 100%;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     padding: 0 1%;
     z-index: 5;
     margin: auto;
@@ -341,7 +341,7 @@ html, body {
 }
 
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
