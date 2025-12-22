@@ -346,6 +346,7 @@ html, body {
     gap: 6px;
     cursor: pointer;
     margin-left: auto;
+    margin-right: max(16px, env(safe-area-inset-right));
 }
 
 .hamburger span {
