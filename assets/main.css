@@ -30,6 +30,10 @@ body.loading {
     overflow: hidden;
 }
 
+body.loading > *:not(#loader) {
+    visibility: hidden;
+}
+
 body {
     opacity: 1;
     transition: opacity 0.3s ease;

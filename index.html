@@ -160,16 +160,17 @@ searchInput.addEventListener('input', e => {
 
 <script>
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
 
-        loader.style.opacity = '0';
-        loader.style.pointerEvents = 'none';
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+            document.body.classList.remove('loading');
 
-        document.body.classList.remove('loading');
-
-        setTimeout(() => loader.remove(), 300);
-    }, 800);
+            setTimeout(() => loader.remove(), 300);
+        }, 800);
+    });
 });
 </script>
 
